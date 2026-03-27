@@ -7,10 +7,12 @@ describe('heartBeatController', () => {
     const json = vi.fn();
     const res = {
       json,
+    // biome-ignore lint/suspicious/noExplicitAny: <Heatbeat don't need a huge data validation>
     } as any;
 
     // mock request (not used here)
-    const req = {} as any;
+    // biome-ignore lint/suspicious/noExplicitAny: <Heatbeat don't need a huge data validation>
+        const req = {} as any;
 
     // call controller
     heartBeatController(req, res);
